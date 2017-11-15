@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.3\SabberStoneCore.xml</DocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\Data\CardDefs.xml">
+      <LogicalName>SabberStoneCore.Resources.CardDefs.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\Data\PlayErrors.xml">
+      <LogicalName>SabberStoneCore.Resources.PlayErrors.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources\Data\Archive\CardDefs.xml">
+      <LogicalName>SabberStoneCore.Resources.Archive.CardDefs.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\Data\Archive\CARD.xml">
+      <LogicalName>SabberStoneCore.Resources.Archive.CARD.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
